@@ -1,7 +1,9 @@
 <?php
 $pixelk_domain = 'http://wtmtrack.com';
 
-require base_path().'\resources\views\lp_tracking.php';
+dd(base_path().'\resources\views\lp_tracking.php');
+
+include base_path().'\resources\views\lp_tracking.php';
 
 ?>
 
