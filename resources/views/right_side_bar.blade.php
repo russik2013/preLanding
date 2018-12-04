@@ -7,7 +7,7 @@
                 <h5 class="m-b-0 pink-border-bottom">READER RESULTS</h5>
 
                 <h5 class="m-b-0 pink-border-bottom">PROFIT: {{$item->profit}} {{config('globalsiteamount')[$setting->amount]}}</h5>
-                <a href="" class="out_link " target="_blank">
+                <a href="{{$item->url}}" class="out_link " target="_blank">
                     <img src="{{asset('images/'.$item->photo)}}" class="img-responsive">
                 </a>
                 <p class="m-b-5">{!! $item->text !!}</p>

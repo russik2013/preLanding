@@ -1,6 +1,14 @@
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+$pixelk_domain = 'http://wtmtrack.com';
+
+require base_path().'\resources\views\lp_tracking.php';
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0066)http://www.doorbellflowe.com/blp7-L-Nvolu08/index.php?m=Playchoose -->
-<html xmlns="http://www.w3.org/1999/xhtml" class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+<head>
 
 
 
@@ -9,7 +17,9 @@
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
     <title>Jim Davidson Reveals How He Bounced Back After The Bankruptcy</title>
     <link href="{{asset('css/tidyx-v2.css')}}" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" charset="UTF-8" href="{{asset('css/translateelement.css')}}"></head>
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="{{asset('css/translateelement.css')}}">
+<!--    --><?php //echo $lp_js;?>
+</head>
 <body class="article-page news">
 <style>
 
