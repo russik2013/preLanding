@@ -21,6 +21,7 @@
                 <td>
 
                     <a class="btn btn-primary" href="{{route('admin.article.edit', ['id' => $article->id])}}" role="button">Edit</a>
+                    <a class="btn btn-primary" href="{{route('admin.article.show', ['article' => $article->id])}}">Show</a>
                     <a class="btn btn-danger" href="{{route('admin.article.delete', ['id' => $article->id])}}">Delete</a>
 
                     {{--<a class="btn btn-success" href="{{route('book.show', ['id' => $book->id])}}">Show</a>--}}

@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'SiteController@index')->name('home');
+Route::get('/{param?}', 'SiteController@index')->name('home');
 
 Route::get('admin/login', 'SiteController@login')->name('admin.login');
 Route::post('admin/auth', 'SiteController@auth')->name('admin.auth');
@@ -21,23 +21,22 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function (){
 
     Route::group(['prefix' => 'site'], function (){
 
-        Route::get('setting',            'SiteController@siteSittings')   ->name('admin.site.setting');
+        Route::get('setting',            'SiteController@siteSittings')         ->name('admin.site.setting');
         Route::post('setting',           'SiteController@siteSittingsUpdate')   ->name('admin.site.setting.update');
 
     });
 
     Route::group(['prefix' => 'article'], function (){
 
-        Route::get('/',             'ArticleController@index')          ->  name('admin.article.index');
-        Route::get('create',        'ArticleController@create')         ->  name('admin.article.create');
-        Route::post('add',          'ArticleController@add')            ->  name('admin.article.add');
-        Route::get('edit/{id}',     'ArticleController@edit')           ->  name('admin.article.edit');
-        Route::post('update/{id}',  'ArticleController@update')         ->  name('admin.article.update');
-        Route::get('delete/{id}',   'ArticleController@delete')         ->  name('admin.article.delete');
+        Route::get('/',                 'ArticleController@index')          ->  name('admin.article.index');
+        Route::get('create',            'ArticleController@create')         ->  name('admin.article.create');
+        Route::post('add',              'ArticleController@add')            ->  name('admin.article.add');
+        Route::get('edit/{id}',         'ArticleController@edit')           ->  name('admin.article.edit');
+        Route::post('update/{id}',      'ArticleController@update')         ->  name('admin.article.update');
+        Route::get('delete/{id}',       'ArticleController@delete')         ->  name('admin.article.delete');
+        Route::get('show/{article}',    'ArticleController@show')           ->  name('admin.article.show');
 
     });
-
-
 
     Route::group(['prefix' => 'sidebar'], function (){
 
@@ -64,6 +63,20 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function (){
 
     });
 
+    Route::group(['prefix' => 'link'], function (){
+
+        Route::get('/',                 'LinksController@index')    -> name('admin.link.index');
+        Route::get('/create',           'LinksController@create')   -> name('admin.link.create');
+        Route::post('/add',             'LinksController@add')      -> name('admin.link.add');
+        Route::get('/edit/{link}',      'LinksController@edit')     -> name('admin.link.edit');
+        Route::post('/update/{link}',   'LinksController@update')   -> name('admin.link.update');
+        Route::get('/delete/{link}',    'LinksController@delete')   -> name('admin.link.delete');
+//        Route::get('/{sidebar}', function (App\SideBar $sidebar){
+//            dd($sidebar);
+//        });
+
+
+    });
 
 });
 //Route::get('articles', );

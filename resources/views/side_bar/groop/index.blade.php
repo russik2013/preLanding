@@ -7,7 +7,7 @@
     <tr>
         <th scope="col">name</th>
         {{--<th scope="col">photo</th>--}}
-        {{--<th scope="col">control</th>--}}
+        <th scope="col">control</th>
     </tr>
 
     </thead>

@@ -10,6 +10,7 @@ class ArticleController extends Controller
 {
     public function index()
     {
+
         return view('articles.index')->with('articles', Artecle::all());
     }
 
@@ -46,5 +47,10 @@ class ArticleController extends Controller
     {
         $article -> find($id) -> delete();
         return redirect() -> route('admin.article.index');
+    }
+
+    public function show(Artecle $article)
+    {
+        return view('articles.show') -> with('article', $article);
     }
 }

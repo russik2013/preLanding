@@ -12,4 +12,9 @@ class SideBarGroop extends Model
     {
         return $this->hasMany(SideBar::class);
     }
+
+    public function getLinks()
+    {
+        return $this->morphMany('App\LinkParams', 'params');
+    }
 }

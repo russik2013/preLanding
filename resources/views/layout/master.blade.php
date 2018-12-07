@@ -30,6 +30,7 @@
         <a class="navbar-brand btn btn-primary" href="{{route('admin.sidebar.groop.index')}}" role="button">Sidebar groops</a>
         <a class="navbar-brand btn btn-primary" href="{{route('admin.sidebar.index')}}" role="button">Sidebars </a>
         <a class="navbar-brand btn btn-primary" href="{{route('admin.site.setting')}}" role="button">Site Global Setting</a>
+        <a class="navbar-brand btn btn-primary" href="{{route('admin.link.index')}}" role="button">Site Links</a>
         <a class="navbar-brand btn btn-danger" href="{{route('admin.article.index')}}"  role="button">Article</a>
     </form>
 </nav>

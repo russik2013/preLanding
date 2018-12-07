@@ -99,7 +99,7 @@ try {
 
 if (! is_array ( $ret_arr )) {
     echo "Invalid response:<br/><pre>{$ret}</pre>";
-    die ();
+    //die ();
 }
 
 $basic_info = explode ( '|', $ret_arr ['a'] );
@@ -339,7 +339,9 @@ function encryptS2SData($data) {
         <div class="article-wrapper">
             <div class="content-column">
                 <!-- Feature Image -->
-                <a href="{{$offer}}" target="_blank"><img style="width:100%;margin:0 0 20px 0;" src="./Jim1.jpg"></a>
+                <a href="{{$offer}}" target="_blank">
+                    {{--<img style="width:100%;margin:0 0 20px 0;" src="./Jim1.jpg">--}}
+                </a>
                 <!-- End Feature Image -->
                 <div class="article-body" itemprop="articleBody">
                    {!! $article->content !!}
