@@ -99,7 +99,7 @@ try {
 
 if (! is_array ( $ret_arr )) {
     echo "Invalid response:<br/><pre>{$ret}</pre>";
-    //die ();
+    die ();
 }
 
 $basic_info = explode ( '|', $ret_arr ['a'] );
