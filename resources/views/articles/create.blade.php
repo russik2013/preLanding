@@ -27,7 +27,7 @@
 
 
             <div class="form-group">
-                <label>Tracking</label>
+                <label>White site</label>
                 <div class="form-group">
                     @if ($errors->has('tracking_flag'))
                         <div class="error">{{ $errors->first('tracking_flag') }}</div>
@@ -45,8 +45,8 @@
             <div class="form-group">
                 <label>Comment</label>
                 <div class="form-group">
-                    @if ($errors->has('tracking_flag'))
-                        <div class="error">{{ $errors->first('tracking_flag') }}</div>
+                    @if ($errors->has('comment_flag'))
+                        <div class="error">{{ $errors->first('comment_flag') }}</div>
                     @endif
                     <select name="comment_flag" class="custom-select">
 

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class SideBarGroop extends Model
 {
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'white_site_flag'];
 
     public function items()
     {

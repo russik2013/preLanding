@@ -32,7 +32,7 @@ class SideBarGroopController extends Controller
     public function update(SideBarGroopRequest $request, $id)
     {
 
-        SideBarGroop::where('id', $id)->update($request->only('name'));
+        SideBarGroop::where('id', $id)->update($request->only('name', 'white_site_flag'));
         return redirect()->route('admin.sidebar.groop.index');
     }
 

@@ -36,8 +36,9 @@ class SideBarGroopRequest extends FormRequest
             case 'admin.sidebar.groop.update' :
 
                 return [
-                    'name' =>  'required|string',
-                    'id'   =>  'required|numeric|exists:side_bar_groops,id',
+                    'name'            =>  'required|string',
+                    'id'              =>  'required|numeric|exists:side_bar_groops,id',
+                    'white_site_flag' =>  'required|in:0,1'
                 ];
 
                 break;
