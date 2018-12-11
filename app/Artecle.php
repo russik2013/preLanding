@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Artecle extends Model
 {
-    protected $fillable = ['title', 'content', 'tracking_flag'];
+    protected $fillable = ['title', 'content', 'tracking_flag', 'comment_flag'];
 
     public function getLinks()
     {

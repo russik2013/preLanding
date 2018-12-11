@@ -359,7 +359,7 @@ function encryptS2SData($data) {
                    {!! $article->content !!}
                 </div>
 
-
+                @if($article->comment_flag == 1)
                 <div class="_li">
                     <div class="pluginSkinLight pluginFontHelvetica fb--container">
                         <div id="u_0_0">
@@ -965,7 +965,9 @@ function encryptS2SData($data) {
                         <a id="comments-section" name="comments-section" style="position:absolute;top:-100px;" href="{{$offer}}" target="_blank"></a>
                     </div>
                 </div>
+                @endif
                 <aside class="related-column base-layout"></aside>
+
             </div>
 
 
@@ -980,8 +982,7 @@ function encryptS2SData($data) {
         </div>
     </article>
 </main>
-<footer>
-</footer>
+
 <script>
     var s = document.getElementsByTagName("a");
     for (l = 0; l < s.length; ++l) s[l].onclick = function() {
