@@ -6,8 +6,6 @@
         }
     </style>
 
-
-
     <div class="row justify-content-md-center">
         <form action="{{route('admin.site.setting.update')}}" method="post">
 
@@ -23,6 +21,21 @@
                             <option @if($settings->amount == $key) selected @endif value="{{$key}}">{{$key}} ({{$value}})</option>
 
                         @endforeach
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Amount</label>
+                <div class="form-group">
+                    @if ($errors->has('tracking_flag'))
+                        <div class="error">{{ $errors->first('tracking_flag') }}</div>
+                    @endif
+                    <select name="tracking_flag" class="custom-select">
+
+                        <option @if($settings->tracking_flag == 1) selected @endif value="1">ON</option>
+                        <option @if($settings->tracking_flag == 0) selected @endif value="0">OFF</option>
 
                     </select>
                 </div>

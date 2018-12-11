@@ -24,7 +24,8 @@ class SiteSettingRequest extends FormRequest
     public function rules()
     {
         return [
-            'amount' => 'required|string|in:USD,GBP,ZAR,EUR'
+            'amount' => 'required|string|in:USD,GBP,ZAR,EUR',
+            'tracking_flag' => 'required|in:0,1'
         ];
     }
 }

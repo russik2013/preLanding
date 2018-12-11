@@ -70,7 +70,8 @@ class SiteController extends Controller
     public function rightSideBar(View $view)
     {
         $sidebars = SideBarGroop::with('items')->get();
-        if($this->link->getParamsSideBarGroups){
+
+        if($this->link && $this->link->getParamsSideBarGroups){
             $groupdIdsArray = $this->link->getParamsSideBarGroups->pluck('params_id')->toArray();
             if(!empty($groupdIdsArray)){
                 $sidebars = SideBarGroop::whereIn('id', $groupdIdsArray)->with('items')->get();
