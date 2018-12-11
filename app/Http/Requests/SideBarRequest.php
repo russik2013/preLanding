@@ -30,7 +30,7 @@ class SideBarRequest extends FormRequest
 
                 return [
                     'text'              =>  'required|string',
-                    'url'               =>  'required|string|url',
+                    'url'               =>  'required|string',
                     'photo'             =>  'required|image|max:10240',
                     'side_bar_groop_id' =>  'required|numeric|exists:side_bar_groops,id',
                     'profit'            =>  'required|numeric',
@@ -42,7 +42,7 @@ class SideBarRequest extends FormRequest
 
                 return [
                     'text'              =>  'required|string',
-                    'url'               =>  'required|string|url',
+                    'url'               =>  'required|string',
                     'photo'             =>  'nullable|image|max:10240',
                     'side_bar_groop_id' =>  'required|numeric|exists:side_bar_groops,id',
                     'profit'            =>  'required|numeric',
