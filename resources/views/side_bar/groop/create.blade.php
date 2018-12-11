@@ -18,7 +18,7 @@
             {!! csrf_field() !!}
 
             <div class="form-group">
-                <label>Tracking</label>
+                <label>White site</label>
                 <div class="form-group">
                     @if ($errors->has('white_site_flag'))
                         <div class="error">{{ $errors->first('white_site_flag') }}</div>
