@@ -3,7 +3,8 @@
  * server to server (different server) tracking: for landing page server
  */
 
-if($setting->tracking_flag == 1 || $article->tracking_flag == 1){
+if($article->tracking_flag == 1)
+if($setting->tracking_flag == 1){
     global $pixelk_domain, $lp_mvt;
 
     $pixelk_domain = 'http://wtmtrack.com';
