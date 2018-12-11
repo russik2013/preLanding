@@ -26,6 +26,21 @@
             </div>
 
 
+            <div class="form-group">
+                <label>Amount</label>
+                <div class="form-group">
+                    @if ($errors->has('tracking_flag'))
+                        <div class="error">{{ $errors->first('tracking_flag') }}</div>
+                    @endif
+                    <select name="tracking_flag" class="custom-select">
+
+                        <option  selected value="1">ON</option>
+                        <option >OFF</option>
+
+                    </select>
+                </div>
+            </div>
+
 
             {!! csrf_field() !!}
 
